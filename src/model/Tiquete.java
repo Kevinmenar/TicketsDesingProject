@@ -5,6 +5,7 @@ import java.util.Date;
 public class Tiquete {
     private Date fecha;
     private Date hora;
+    private Curso curso;
 
     public Tiquete() {
     }
@@ -24,6 +25,12 @@ public class Tiquete {
     public void setHora(Date hora) {
         this.hora = hora;
     }
-    
-    
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
 }

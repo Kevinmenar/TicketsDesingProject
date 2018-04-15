@@ -3,8 +3,17 @@ package model;
 public class Revision extends Consulta{
     private String lugar;
     private String direccion;
+    private TipoEvaluacion tipoEvaluacion;
 
     public Revision() {
+    }
+
+    public TipoEvaluacion getTipoEvaluacion() {
+        return tipoEvaluacion;
+    }
+
+    public void setTipoEvaluacion(TipoEvaluacion tipoEvaluacion) {
+        this.tipoEvaluacion = tipoEvaluacion;
     }
 
     public String getLugar() {
