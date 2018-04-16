@@ -2,8 +2,8 @@ package model;
 
 public class Estudiante {
     private String nombre;
-    private String usuario;
-    private String password;
+    private String correo;
+    private String carnet;
 
     public Estudiante() {
     }
@@ -16,21 +16,24 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    public String getPassword() {
-        return password;
+    public String getCarnet() {
+        return carnet;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setCarnet(String carnet) {
+        this.carnet = carnet;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Estudiante{" + "nombre=" + nombre + ", correo=" + correo + ", carnet=" + carnet + '}';
+    }    
 }

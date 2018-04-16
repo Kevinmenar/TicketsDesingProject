@@ -3,7 +3,6 @@ package model;
 public class Consulta extends Tiquete{
     private String lugar;
     private String duracion;
-    private TipoEvaluacion tipoEvaluacion;
 
     public Consulta() {
     }
@@ -24,11 +23,9 @@ public class Consulta extends Tiquete{
         this.duracion = duracion;
     }
 
-    public TipoEvaluacion getTipoEvaluacion() {
-        return tipoEvaluacion;
+    @Override
+    public String toString() {
+        return "Consulta{" + "lugar=" + lugar + ", duracion=" + duracion + '}';
     }
-
-    public void setTipoEvaluacion(TipoEvaluacion tipoEvaluacion) {
-        this.tipoEvaluacion = tipoEvaluacion;
-    }
+    
 }

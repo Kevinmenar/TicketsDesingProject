@@ -1,9 +1,13 @@
 package desingprojectticket;
 
-public class DesingProjectTicket {
+import controller.DAO.DAOTiqueteImp;
+import model.Curso;
 
+public class DesingProjectTicket {
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+        Curso curso = new Curso();
+        curso.setId(3);
+        DAOTiqueteImp tiqueteConection = new DAOTiqueteImp();
+        tiqueteConection.getTiqueteConsultaNombre(curso);
+    }  
 }

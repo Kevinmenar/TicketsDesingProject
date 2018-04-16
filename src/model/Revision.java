@@ -1,8 +1,10 @@
 package model;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 public class Revision extends Consulta{
-    private String lugar;
-    private String direccion;
+    private String descripcion;
     private TipoEvaluacion tipoEvaluacion;
 
     public Revision() {
@@ -16,21 +18,19 @@ public class Revision extends Consulta{
         this.tipoEvaluacion = tipoEvaluacion;
     }
 
-    public String getLugar() {
-        return lugar;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setLugar(String lugar) {
-        this.lugar = lugar;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public String getDireccion() {
-        return direccion;
+    @Override
+    public String toString() {
+        return "Revision{" + "descripcion=" + descripcion + ", tipoEvaluacion=" + tipoEvaluacion + '}';
     }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
+    
     
     
 }
