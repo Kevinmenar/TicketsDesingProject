@@ -26,14 +26,14 @@ CREATE TABLE `reclamo` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Motivo` varchar(45) NOT NULL,
   `Archivo` blob NOT NULL,
-  `Fk_Tiqute` int(11) NOT NULL,
+  `Fk_Tiquete` int(11) NOT NULL,
   `Fk_TipoEvaluacion` int(11) NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Id_UNIQUE` (`Id`),
   KEY `Fk_Reclamo_TipoEvaluacion_idx` (`Fk_TipoEvaluacion`),
-  KEY `Fk_Reclamo_Tiquete_idx` (`Fk_Tiqute`),
+  KEY `Fk_Reclamo_Tiquete_idx` (`Fk_Tiquete`),
   CONSTRAINT `Fk_Reclamo_TipoEvaluacion` FOREIGN KEY (`Fk_TipoEvaluacion`) REFERENCES `tipoevaluacion` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `Fk_Reclamo_Tiquete` FOREIGN KEY (`Fk_Tiqute`) REFERENCES `tiquete` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `Fk_Reclamo_Tiquete` FOREIGN KEY (`Fk_Tiquete`) REFERENCES `tiquete` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-15 14:22:08
+-- Dump completed on 2018-04-15 18:02:23

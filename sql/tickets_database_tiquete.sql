@@ -29,6 +29,7 @@ CREATE TABLE `tiquete` (
   `Carnet` varchar(45) NOT NULL,
   `Fecha_Hora` datetime NOT NULL,
   `Fk_Curso` int(11) NOT NULL,
+  `Estado` varchar(45) NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Id_UNIQUE` (`Id`),
   KEY `Fk_Tiquete_Curso_idx` (`Fk_Curso`),
@@ -42,7 +43,7 @@ CREATE TABLE `tiquete` (
 
 LOCK TABLES `tiquete` WRITE;
 /*!40000 ALTER TABLE `tiquete` DISABLE KEYS */;
-INSERT INTO `tiquete` VALUES (6,'Kevin','Test0@example.com','201229313','2018-04-15 03:14:07',3);
+INSERT INTO `tiquete` VALUES (6,'Kevin','Test0@example.com','201229313','2018-04-15 03:14:07',3,'');
 /*!40000 ALTER TABLE `tiquete` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-15 14:22:08
+-- Dump completed on 2018-04-15 18:02:23
